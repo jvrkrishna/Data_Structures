@@ -65,7 +65,7 @@ while True:
         break
     else:
         print("Enter the correct operation!")
-
+***************************************************************
 # # Stack implementation in python list
 # Creating a stack
 def create_stack():
@@ -98,7 +98,7 @@ def pop(stack):
     return stack.pop()
 print("popped item: ", pop(stack))
 print("stack after popping an element: ", stack)
-
+***************************************************************
 '''Key Points
 Python lists can be used as stacks but have slower performance for large data sets due to memory reallocation.
 
@@ -175,7 +175,7 @@ print("Top element:", s.peek())   # 30
 print("Popped element:", s.pop()) # 30
 print("Size:", s.size())          # 2
 print("Is empty?", s.is_empty())  # False
-
+***************************************************************
 #Stack using queue.LifoQueue
 from queue import LifoQueue
 
@@ -203,7 +203,7 @@ print("Popped:", stack.get()) #in get()---timeout works when the error raises it
 
 # Check if empty
 print("Is empty?", stack.empty())  # Output: False
-
+***************************************************************
 '''
 Summary: deque vs LifoQueue
 Feature	              deque	                      LifoQueue
