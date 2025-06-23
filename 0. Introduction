@@ -1,0 +1,124 @@
+Introduction to Data Structure:
+    Data Structures are the set of data elements that produce a well-organized way of storing and organizing the data in the computer so it can be used well.
+
+    As per name indicates itself that organizing the data in memory.
+
+    The data structure is not any programming language like c, c++, Java etc. 
+
+For example, the data structures like Stack, Queue, Linked List, etc.
+
+Data Structures are mostly used in the fields of Computer Science, Artificial intelligence Graphics, etc. They play a very interesting role in the life of programmers to store and play with the data in a systematic order while working with dynamic large projects.
+
+Given below are some terminologies that are used nowadays:
+Data: It can be described as a group of values.
+For example, “Student’s name”, “Student’s id”, “Student’s roll no”, etc.
+
+Group Items: The data items which are further subdivided into parts are known as group items.
+For example, “Student Name” is divided into three parts “First Name”, “Middle Name” and “Last Name”.
+
+Record: It can be described as a group of various data elements. 
+For example, if we talk about a particular company, then its “Name”, “Address”, “Area of knowledge of a company”, “Courses”, etc are combined together to form a record.
+
+File: A file can be described as a group of records. 
+For example, in a company, there are various departments, “Sales departments”, “Marketing departments”, etc. These departments have a number of employees working together. Each department has a record of each employee which will be stored as a record.
+
+Now, there will be a file for each department in which all the records of employees are getting saved together.
+
+Attribute and Entity: Let’s understand this with an example!
+Name	Roll no	Subject
+Kanika	9742912	Physics
+Manisha	8536438	Mathematics
+
+In the above example, we have a record that stores the names of the students along with their roll number and subjects. If you see, we store the names, roll no and the subjects of the students under the “Names”, “Roll no” and “Subject” columns and fill the rest of the row with the required information.
+
+The attribute is the column that stores the information related to the particular name of the column. 
+For example, “Name = Kanika” here the attribute is “Name” and “Kanika” is an entity.
+
+In short, the columns are the attributes and the rows are the entities.
+
+Field: It is a single unit of information that represents the attribute of an entity.
+
+Need For Data Structures
+We need data structures nowadays because things are becoming complex and the amount of data is increasing at a high rate.
+
+Processor Speed: Data is increasing day by day. To handle a large amount of data, high-speed processors are needed. Sometimes processors fail while dealing with huge amounts of data.
+
+Data Search: With the increase of data on a daily basis it becomes difficult to search and find the particular data from the huge amount of data.
+For example, what if we need to search the one item from the 1000 items? Without data structures, the result will take time to traverse each item from 1000 items and will find the result. To overcome this, we need data structures.
+
+Multiple Requests: Sometimes multiple users are finding the data on the webserver which slows down the server and the user does not get the result. To resolve this issue, data structures are used.
+
+They organize the data in a well-organized manner so that the user can find the searched data in a minimum time without slowing down the servers.
+
+Advantages Of Data Structures
+•	Data Structures enable the storage of information on hard disks.
+•	They help to manage large data sets for example databases, internet indexing services, etc.
+•	Data Structures play an important role when someone wants to design algorithms.
+•	Data Structures secure the data and can’t be lost. One can use the stored data in multiple projects and programs.
+•	It processes the data easily.
+•	One can access the data anytime anywhere from the connected machine, for example, a computer, laptop, etc.
+
+Python Data Structure Operations
+The following operations play an important role in terms of Data Structures:
+•	Traversing: It means to traverse or visit each element of the particular data structure only once so that the elements can be processed.
+•	For example, we need to calculate the sum of the weights of each node in the graph. We will traverse each element (weight) of an array one by one to perform the addition of weights.
+•	Searching: It means to find/locate the element in the data structure.
+•	For example, we have an array, let say “arr = [2,5,3,7,5,9,1]”. From this, we need to find the location of “5”. How do we find it?
+•	Data Structures provide various techniques for this situation and some of them are Linear search, Binary search, etc.
+
+•	Inserting: It means to insert the data elements in the data structure at any time and anywhere.
+
+•	Deleting: It means to delete the elements in the data structures.
+
+•	Sorting: Sorting means sorting/arranging the data elements either in ascending order or descending order. Data Structures provides various sorting techniques, for example, insertion sort, quick sort, selection sort, bubble sort, etc.
+
+•	Merging: It means merging the data elements.
+•	For example, there are two lists “L1” and “L2” with their elements. We want to combine/merge them into one “L1 + L2”. Data Structures provide the technique to perform this merge sort.
+
+Python has built-in support for several data structures, such as lists, dictionaries, and sets.
+Other data structures can be implemented using Python classes and objects, such as linked lists, stacks, queues, trees, and graphs.
+•	Lists and Arrays
+•	Stacks
+•	Queues
+•	Linked Lists
+•	Hash Tables
+•	Trees
+o	Binary Trees
+o	Binary Search Trees
+o	AVL Trees
+•	Graphs
+
+Algorithms
+Algorithms are a way of working with data in a computer and solving problems like sorting, searching, etc.
+•	Linear Search
+•	Binary Search
+•	Bubble Sort
+•	Selection Sort
+•	Insertion Sort
+•	Quick Sort
+•	Counting Sort
+•	Radix Sort
+•	Merge Sort
+
+
+Types Of Data Structures
+Data Structures are divided into two parts:
+
+#1) Built-in Data Structures
+Python provides various data structures that are written in Python itself. These data structures help the developers to ease their work and obtain the output very fast.
+
+Given below are some Built-in Data Structures:
+•	List: Lists are used to reserve/store the data of various data types in a subsequent way. Every element of the list has an address which we can call the index of an element. It starts from 0 and ends at the last element. For notation, it is like ( 0, n-1 ). It supports negative indexing as well which begins from -1 and we can traverse the elements from end to start. 
+
+ 
+•	Tuple: Tuples are the same as lists. The main difference is that the data present in the list can be changed but the data present in tuples cannot be changed. It can be changed when the data in the tuple is mutable. 
+
+•	Dictionary: Dictionaries in Python contain unordered information and are used to store the data in pairs. Dictionaries are case-sensitive. Each element has its key value. For example, in a school or college, each student has his/her unique roll number. Each roll number has just only one name which means the roll number will act as a key and the student roll number will act as the value to that key. 
+
+•	Set: Set contains unordered elements that are unique. It does not include the elements in repetition. Even if the user adds one element twice, then it would be added to the set only once. Sets are unchangeable as if they are created once and cannot be changed. Not possible to delete the elements but adding the new elements is possible.
+
+2) User-Defined Data Structures
+Python supports user-defined data structures i.e. the user can create their own data structures, 
+for example, Stack, Queue, Tree, Linked List, Graph, and Hash Map.
+
+
