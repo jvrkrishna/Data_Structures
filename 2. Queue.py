@@ -1,60 +1,78 @@
-'''
-Queue Data Structure
+#Queue Data Structure
+'''A queue is a useful data structure in programming. It operates similarly to a ticket queue outside a cinema hall, where the first person to enter the queue is the first one to receive a ticket.
 
-A queue is a useful data structure in programming. It is similar to the ticket queue outside a cinema hall, where the first person entering the queue is the first person who gets the ticket.
+A queue follows the First In, First Out (FIFO) principle, meaning the first item that enters the queue is the first one to leave.
 
-Queue follows the First In First Out (FIFO) rule - the item that goes in first is the item that comes out first.
-FIFO Representation of Queue
-In the above image, since 1 was kept in the queue before 2, it is the first to be removed from the queue as well. It follows the FIFO rule.
+FIFO Representation of Queue:
+In the image above, since 1 was added to the queue before 2, it will be the first to be removed from the queue. This demonstrates the FIFO principle.
 
-In programming terms, putting items in the queue is called enqueue, and removing items from the queue is called dequeue.
-'''
+In programming terms:
 
-# Queue implementation in python list
-queue=[]
+Enqueue refers to adding items to the queue.
+
+Dequeue refers to removing items from the queue.'''
+
+#Queue Implementation in Python (Using List)
+queue = []  # Initial empty queue
+
+# Adding elements to the queue (enqueue)
 queue.append(10)
 queue.append(20)
 queue.append(30)
-print(queue)
-queue.pop()
-queue.pop()
-print(queue)
 
-#To know the queue is empty or not
-queue=[]
-print(len(queue))==0
-print(not queue)
+print("Queue after enqueue operations:", queue)
 
+# Removing elements from the queue (dequeue)
+queue.pop(0)  # Remove the first element (FIFO behavior)
+queue.pop(0)  # Remove the next element
+
+print("Queue after dequeue operations:", queue)
+
+#Checking if the Queue is Empty
+queue = []  # Initial empty queue
+print(len(queue) == 0)  # Returns True if the queue is empty
+print(not queue)        # Also returns True if the queue is empty
+
+#Displaying the Front Element of the Queue
 queue.append(10)
 queue.append(20)
-print(queue[-1])
 
-##queue implementation in python list
-queue=[]
+# Displaying the front element (First element in the queue)
+print("Front element of the queue:", queue[0])
+
+#Queue Implementation in Python (Interactive)
+#Here’s a simple interactive implementation where users can enqueue and dequeue elements:
+
+queue = []  # Initial empty queue
+
+# Enqueue operation
 def enqueue():
-    element = input("Enter the element:")
+    element = input("Enter the element to enqueue: ")
     queue.append(element)
-    print(queue)
+    print("Queue after enqueue:", queue)
 
+# Dequeue operation
 def dequeue():
     if not queue:
-        print("queue is empty!")
+        print("Queue is empty!")
     else:
-        e = queue.pop()
-        print("removed element:",e)
-        print(queue)
+        e = queue.pop(0)  # Remove the first element (FIFO)
+        print(f"Removed element: {e}")
+        print("Queue after dequeue:", queue)
 
+# Main interactive loop
 while True:
-    print("Select the operation 1. enqueue 2.dequeue 3.quit")
+    print("Select an operation: 1. Enqueue  2. Dequeue  3. Quit")
     choice = int(input())
-    if choice==1:
+    
+    if choice == 1:
         enqueue()
-    elif choice==2:
+    elif choice == 2:
         dequeue()
-    elif choice==3:
+    elif choice == 3:
         break
     else:
-        print("Enter the correct operation!")
+        print("Please select a valid operation!")
         
 '''
 
