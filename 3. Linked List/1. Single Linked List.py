@@ -21,6 +21,9 @@ print(n.__dict__)
 class SingleLinkedList:
     def __init__(self):
         self.head = None
+        
+s=SingleLinkedList()
+print(s.__dict__)
 #****************************************************************************************      
 #Creation of linked list
 class Node:
