@@ -3,13 +3,8 @@
 
 A queue follows the First In, First Out (FIFO) principle, meaning the first item that enters the queue is the first one to leave.
 
-FIFO Representation of Queue:
-In the image above, since 1 was added to the queue before 2, it will be the first to be removed from the queue. This demonstrates the FIFO principle.
-
 In programming terms:
-
 Enqueue refers to adding items to the queue.
-
 Dequeue refers to removing items from the queue.'''
 
 #Queue Implementation in Python (Using List)
@@ -113,6 +108,9 @@ q.put(3)
 
 print(q.get())  # Dequeue -> 1
 print(q.get())  # -> 2
+print(q.get())  # -> 3
+print(list(q.queue)) # to print remaining queue
+print(q.get(timeout=1))
 
 
 #🧱 2. LifoQueue (Stack behavior - Last In First Out)--Also from queue module.
@@ -125,6 +123,7 @@ q.put('C')
 
 print(q.get())  # Pop -> 'C'
 print(q.get())  # -> 'B'
+print(list(q.queue)) # to print remaining queue
 
 #🧱 3. PriorityQueue (Based on priority)--From queue module. Smaller numbers = higher priority.
 from queue import PriorityQueue
@@ -136,6 +135,7 @@ pq.put((3, "sleep"))
 
 print(pq.get())  # -> (1, 'eat')
 print(pq.get())  # -> (2, 'code')
+print(list(pq.queue)) # to print remaining queue
 
 #🧱 4. Deque (Double-ended queue)--From collections module. Can add/remove from both ends.
 from collections import deque
