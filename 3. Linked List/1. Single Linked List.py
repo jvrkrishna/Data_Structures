@@ -230,3 +230,212 @@ L.insert_at_position(2, 15)  # Insert 15 at position 1
 
 print("After insertion at position 2:")
 L.display()
+
+'''************************************************************************'''
+#✅delete_at_beginning:
+'''🧠 Concept:
+To delete a node at the beginning:
+1. Check if the list is empty.
+2. Point the head to the next node.
+3. The original first node is automatically garbage collected (if no references remain).
+'''
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None  # Address of next node
+
+class SingleLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert_at_beginning(self, data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
+
+    def delete_at_beginning(self):
+        if self.head is None:
+            print("Linked List is Empty. Nothing to delete.")
+        else:
+            self.head = self.head.next  # Step 2: Move head to next node
+
+    def display(self):
+        if self.head is None:
+            print("Linked List is Empty")
+        else:
+            temp = self.head
+            while temp:
+                print(temp.data, "-->", end=" ")
+                temp = temp.next
+            print("None")
+
+# Create Linked List and nodes
+L = SingleLinkedList()
+
+# Existing nodes
+n = Node(10)
+L.head = n
+
+n1 = Node(20)
+n.next = n1
+
+n2 = Node(30)
+n1.next = n2
+
+print("Before Deletion at Beginning:")
+L.display()
+
+# Delete node at beginning
+L.delete_at_beginning()
+
+print("After Deletion at Beginning:")
+L.display()
+
+'''************************************************************************'''
+#✅ delete_at_end:
+'''🧠 Concept:
+To delete a node at the beginning:
+1. Check if the list is empty.
+2. Point the head to the next node.
+3. The original first node is automatically garbage collected (if no references remain).
+'''
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None  # Address of next node
+
+class SingleLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert_at_beginning(self, data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
+
+    def delete_at_beginning(self):
+        if self.head is None:
+            print("Linked List is Empty. Nothing to delete.")
+        else:
+            self.head = self.head.next  # Step 2: Move head to next node
+
+    def display(self):
+        if self.head is None:
+            print("Linked List is Empty")
+        else:
+            temp = self.head
+            while temp:
+                print(temp.data, "-->", end=" ")
+                temp = temp.next
+            print("None")
+
+# Create Linked List and nodes
+L = SingleLinkedList()
+
+# Existing nodes
+n = Node(10)
+L.head = n
+
+n1 = Node(20)
+n.next = n1
+
+n2 = Node(30)
+n1.next = n2
+
+print("Before Deletion at Beginning:")
+L.display()
+
+# Delete node at beginning
+L.delete_at_beginning()
+
+print("After Deletion at Beginning:")
+L.display()
+
+'''************************************************************************'''
+# ✅ Deleting at Position:
+'''🧠 Concept:
+To delete a node at a specific position:
+1. If the list is empty, there's nothing to delete.
+2. Traverse the list to the node just before the desired position.
+3. Adjust the links to bypass the node at the desired position.
+4. If position is invalid (greater than the list size), print an error.
+'''
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None  # Address of next node
+
+class SingleLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert_at_end(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+        else:
+            temp = self.head
+            while temp.next:
+                temp = temp.next
+            temp.next = new_node
+
+    def insert_at_position(self, position, data):
+        new_node = Node(data)
+        temp = self.head
+        for i in range(position - 1):
+            temp = temp.next
+        new_node.next = temp.next
+        temp.next = new_node
+
+    def delete_at_position(self, position):
+        if self.head is None:
+            print("Linked List is Empty. Nothing to delete.")
+            return
+        
+        if position == 0:  # Deleting the first node
+            self.head = self.head.next
+            return
+        
+        temp = self.head
+        for i in range(position - 1):
+            if temp is None or temp.next is None:
+                print(f"Position {position} is out of range.")
+                return
+            temp = temp.next
+        
+        # Node to be deleted
+        temp.next = temp.next.next
+
+    def display(self):
+        if self.head is None:
+            print("Linked List is Empty")
+        else:
+            temp = self.head
+            while temp:
+                print(temp.data, "-->", end=" ")
+                temp = temp.next
+            print("None")
+
+# Example usage:
+L = SingleLinkedList()
+L.insert_at_end(10)
+L.insert_at_end(20)
+L.insert_at_end(30)
+L.insert_at_end(40)
+
+print("Before Deletion at Position:")
+L.display()
+
+L.delete_at_position(2)  # Delete node at position 2 (0-indexed)
+
+print("After Deletion at Position 2:")
+L.display()
+
+L.delete_at_position(0)  # Delete the first node
+
+print("After Deletion at Position 0:")
+L.display()
+
+L.delete_at_position(5)  # Invalid position (greater than length)
