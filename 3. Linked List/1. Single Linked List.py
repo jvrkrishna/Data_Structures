@@ -14,7 +14,19 @@ class Node:
     def __init__(self, data):
         self.data = data # Data part of the node
         self.next = None  # Address of next node (# Pointer to the next node (initially None))
+n=Node(10)
+print(n.__dict__)
 
+#Structure of Linked List
+class SingleLinkedList:
+    def __init__(self):
+        self.head = None
+#****************************************************************************************      
+#Creation of linked list
+class Node:
+    def __init__(self, data):
+        self.data = data # Data part of the node
+        self.next = None  # Address of next node (# Pointer to the next node (initially None))
 class SingleLinkedList:
     def __init__(self):
         self.head = None
