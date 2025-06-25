@@ -51,6 +51,22 @@ Algorithms are a way of working with data in a computer and solving problems lik
 •	Radix Sort
 •	Merge Sort
 
+Linear and Non-Linear Data Structures in Python
+Type	         Data Structure	         Linear/Non-Linear
+List	             list	                Linear
+Array	      array (from array module)	    Linear
+Stack	       Custom (using list)	        Linear
+Queue	    deque (from collections)	    Linear
+Linked     List Custom Implementation	    Linear
+Hash Table	          dict	                Linear
+Binary Tree	     Custom Implementation	  Non-Linear
+BinarySearchTree Custom Implementation  Non-Linear
+AVL Tree	     Custom Implementation	  Non-Linear
+Graph	           Custom (using dict)	  Non-Linear
+
+Linear Data Structures: These are typically used when data elements need to be stored and accessed sequentially (arrays, lists, stacks, queues, etc.).
+
+Non-Linear Data Structures: These are ideal for hierarchical or complex relationships, such as in trees and graphs, where elements may have multiple relationships with other elements.
 
 Types Of Data Structures
 Data Structures are divided into two parts:
