@@ -10,6 +10,58 @@ Leaf: A node with no children (a node at the bottom of the tree).
 Edge: The connection between two nodes.
 Subtree: A tree formed from any node and its descendants.'''
 
+#Example Program
+#**********************************************************************************
+#🌳 Tree Data Structure in Python:
+'''
+1. Each node has:
+   - data
+   - list of children (for general trees)
+2. Tree is formed by linking nodes in a hierarchical way.
+3. The root node is the starting point of the tree.
+'''
+
+# Define the Node class
+class TreeNode:
+    def __init__(self, data):
+        self.data = data
+        self.children = []  # A list to hold child nodes
+
+    def add_child(self, child_node):
+        self.children.append(child_node)
+
+    def display(self, level=0):
+        print("  " * level + f"- {self.data}")
+        for child in self.children:
+            child.display(level + 1)
+# Create root node
+root = TreeNode("Electronics")
+
+# Create child nodes
+laptop = TreeNode("Laptop")
+tv = TreeNode("TV")
+phone = TreeNode("Smartphone")
+
+# Add children to root
+root.add_child(laptop)
+root.add_child(tv)
+root.add_child(phone)
+
+# Add children to laptop
+laptop.add_child(TreeNode("Dell"))
+laptop.add_child(TreeNode("HP"))
+
+# Add children to TV
+tv.add_child(TreeNode("Samsung"))
+tv.add_child(TreeNode("Sony"))
+
+# Add children to Smartphone
+phone.add_child(TreeNode("iPhone"))
+phone.add_child(TreeNode("OnePlus"))
+
+# Display the tree
+root.display()
+
 #Characteristics :
 #1. Hierarchical Structure
 '''A tree consists of nodes connected by edges, with one node designated as the root.
