@@ -321,3 +321,69 @@ C.insert_at_position(5, 40)  # Insert 40 at the end
 
 print("After insertion at position 5:")
 C.display()
+
+#******************************************************************************
+#🧠Deleting at the End in Circular Linked List:
+'''
+1. If the list is empty (head is None), do nothing or print a message.
+2. If the list has only one node:
+   - Set head and tail to None.
+3. Otherwise:
+   - Traverse to the second-last node (node before tail).
+   - Set second_last.next = head.
+   - Update tail to second_last.
+'''
+class CircularLinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+    def insert_at_end(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = self.tail = new_node
+            new_node.next = self.head
+        else:
+            self.tail.next = new_node
+            self.tail = new_node
+            self.tail.next = self.head
+
+    def delete_at_end(self):
+        if self.head is None:
+            print("List is empty. Nothing to delete.")
+            return
+
+        if self.head == self.tail:
+            self.head = self.tail = None  # Only one node
+        else:
+            temp = self.head
+            while temp.next != self.tail:
+                temp = temp.next  # Traverse to second last node
+            temp.next = self.head
+            self.tail = temp  # Update tail
+
+    def display(self):
+        if self.head is None:
+            print("Circular Linked List is Empty")
+        else:
+            temp = self.head
+            while True:
+                print(temp.data, "-->", end=" ")
+                temp = temp.next
+                if temp == self.head:
+                    break
+            print("(Back to head)")
+# Create list with manual insertions
+C = CircularLinkedList()
+C.insert_at_end(10)
+C.insert_at_end(20)
+C.insert_at_end(30)
+C.insert_at_end(40)
+
+print("Before Deletion at End:")
+C.display()
+
+C.delete_at_end()
+
+print("After Deletion at End:")
+C.display()
